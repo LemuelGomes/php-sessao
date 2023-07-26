@@ -1,0 +1,13 @@
+#Login
+{
+    position: relative;
+    float: left;
+    width: 400px;
+    background-color: rgb(234, 234, 234);
+    
+    background-image: linear-gradient(rgb(184, 184, 184), rgb(234, 234, 234));
+    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgb(82, 82, 82) 3px 3px 7px;
+}
