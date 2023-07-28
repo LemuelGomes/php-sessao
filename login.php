@@ -1,16 +1,15 @@
 <?php
 
-$email = "lemuel@gmail.com";
-$senha = "1234";
+    $email = "lemuel@gmail.com";
+    $senha = "1234";
 
-if($email == InputEmail)
-{
-    header("Location: sistema.php");
-}
-
-if($senha == InputSenha)
-{
-    header("Location: sistema.php");
-}
+        if($email == $_POST['campo_email'] && $senha == $_POST['campo_senha'])
+        {
+            header("Location: sistema.php");
+        }
+        else
+        {
+            header("Location: index.php");
+        }
 
 ?>
