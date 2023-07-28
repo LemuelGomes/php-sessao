@@ -12,6 +12,7 @@
     
     <title>Document</title>
 </head>
+                
 <body>
 
     <div id="Login">
@@ -34,8 +35,7 @@
             </div>
         
                 <button type="submit" class="btn btn-success">Entrar</button>
-                </form>
-    <div>        
-    
-</body>
+                </form>                
+    <div>    
+</body>                
 </html>
