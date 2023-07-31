@@ -2,13 +2,13 @@
     // Inicializando SESSÃO PHP
     session_start();
 
-    $email = "joao@senac.com";
-    $senha = "joao";
+    $email = "lemuel@gmail.com";
+    $senha = "1234";
 
     if ($email == $_POST['campo_email'] && $senha == $_POST['campo_senha']) {
         // Variável de SESSAO para controle de LOGIN
         $_SESSION['logado'] = 1;
-        $_SESSION['adm'] = 0;
+        $_SESSION['adm'] = 1;
 
         header("Location: sistema.php");
     } else {
