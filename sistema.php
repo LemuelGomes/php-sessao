@@ -14,6 +14,17 @@
 </head>
 <body>
 
+<?php
+    
+    session_start();
+   
+    if ($_SESSION['valida'] == 0) 
+    {
+       header("Location: index.php");
+    }
+
+?>
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
@@ -22,6 +33,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <?php
+                if ($_SESSION['adm'] == 0) 
+                {
+                    echo '<li class="nav-item">';
+                    echo '<a class="nav-link active" aria-current="page" href="#">Administrador</a>';
+                    echo'</li>';
+                }      
+            ?>
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
