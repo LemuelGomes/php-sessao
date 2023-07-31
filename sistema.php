@@ -17,9 +17,11 @@
 <?php
         session_start();
 
-        if ( isset($_SESSION['logado']) && $_SESSION['logado'] == 1 ) {
+        if ( isset($_SESSION['logado']) && $_SESSION['logado'] == 1 ) 
+        {
             // ...
-        } else {
+        } else 
+        {
             session_destroy();
             header('Location: index.php');
         }
