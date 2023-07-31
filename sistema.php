@@ -15,15 +15,15 @@
 <body>
 
 <?php
-    
-    session_start();
-   
-    if ($_SESSION['valida'] == 0) 
-    {
-       header("Location: index.php");
-    }
+        session_start();
 
-?>
+        if ( isset($_SESSION['logado']) && $_SESSION['logado'] == 1 ) {
+            // ...
+        } else {
+            session_destroy();
+            header('Location: index.php');
+        }
+    ?>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -35,12 +35,12 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
             <?php
-                if ($_SESSION['adm'] == 0) 
+                if ( isset($_SESSION['adm']) && $_SESSION['adm'] == 1) 
                 {
                     echo '<li class="nav-item">';
-                    echo '<a class="nav-link active" aria-current="page" href="#">Administrador</a>';
-                    echo'</li>';
-                }      
+                    echo '<a class="nav-link active" aria-current="page" href="#">Administração</a>';
+                    echo '</li>';
+                }
             ?>
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
